@@ -510,7 +510,7 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
         
         // Defer adding the view until we're about to be presented
         if toCropViewController.view.superview == nil {
-            view.addSubview(toCropViewController.view)
+            view.insertSubview(toCropViewController.view, at: 0)
         }
     }
     
@@ -625,6 +625,7 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
 
 extension CropViewController {
     fileprivate func setUpCropController() {
+        toCropViewController.view.backgroundColor = .clear
         modalPresentationStyle = .fullScreen
         addChild(toCropViewController)
         transitioningDelegate = (toCropViewController as! UIViewControllerTransitioningDelegate)
