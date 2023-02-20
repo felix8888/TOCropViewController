@@ -181,12 +181,12 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
     [self.scrollView addSubview:self.backgroundContainerView];
     
     //Grey transparent overlay view
-    self.overlayView = [[UIView alloc] initWithFrame:self.bounds];
+    self.overlayView = [[UIView alloc] initWithFrame:self.backgroundImageView.bounds];
     self.overlayView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.overlayView.backgroundColor = [self.backgroundColor colorWithAlphaComponent:0.35f];
     self.overlayView.hidden = NO;
     self.overlayView.userInteractionEnabled = NO;
-    [self addSubview:self.overlayView];
+    [self.backgroundImageView addSubview:self.overlayView];
     
     //Translucency View
     if (NSClassFromString(@"UIVisualEffectView")) {
