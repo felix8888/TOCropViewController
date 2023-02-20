@@ -320,12 +320,12 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
         frame.size.width = CGRectGetWidth(bounds);
 
         // Set Y and adjust for height
-        if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
-            frame.size.height -= (insets.bottom + kTOCropViewControllerToolbarHeight);
-        } else if (self.toolbarPosition == TOCropViewControllerToolbarPositionTop) {
-			frame.origin.y = kTOCropViewControllerToolbarHeight + insets.top;
-            frame.size.height -= frame.origin.y;
-        }
+//        if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
+//            frame.size.height -= (insets.bottom + kTOCropViewControllerToolbarHeight);
+//        } else if (self.toolbarPosition == TOCropViewControllerToolbarPositionTop) {
+//			frame.origin.y = kTOCropViewControllerToolbarHeight + insets.top;
+//            frame.size.height -= frame.origin.y;
+//        }
     }
     
     return frame;
@@ -392,7 +392,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     CGFloat verticalInset = self.statusBarHeight;
     verticalInset += kTOCropViewControllerTitleTopPadding;
     verticalInset += self.titleLabel.frame.size.height;
-    self.cropView.cropRegionInsets = UIEdgeInsetsMake(verticalInset, 0, insets.bottom, 0);
+//    self.cropView.cropRegionInsets = UIEdgeInsetsMake(verticalInset, 0, insets.bottom, 0);
 }
 
 - (void)adjustToolbarInsets
